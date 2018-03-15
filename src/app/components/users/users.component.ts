@@ -12,11 +12,19 @@ import {
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
+
 export class UsersComponent implements OnInit {
   users: User[];
+
+  showExtended = true;
+  loaded = false;
+  buttonAddNewUser = true;
+
+
   constructor() {}
 
   ngOnInit() {
+
     this.users = [
       {
         firstName: 'John',
@@ -26,7 +34,8 @@ export class UsersComponent implements OnInit {
           street: '476 Yale ave',
           city: 'Spring Field',
           state: 'Co'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/5'
       },
       {
         firstName: 'Mary',
@@ -36,7 +45,8 @@ export class UsersComponent implements OnInit {
           street: '31 Cole st',
           city: 'New York',
           state: 'NY'
-        }
+        },
+        image: 'http://lorempixel.com/6006400/people/8'
       },
       {
         firstName: 'Latesha',
@@ -46,20 +56,18 @@ export class UsersComponent implements OnInit {
           street: '4019 Kakashi st',
           city: 'Denver',
           state: 'Co'
-        }
+        },
+        image: 'http://lorempixel.com/600/600/people/4'
       }
     ];
 
-    this.addUser({
+    this.loaded = true;
+
+  /*  this.addUser({
       firstName: 'Ren',
       lastName: 'Nates',
-      age: 23,
-      address: {
-        street: '39 Main st',
-        city: 'Boise',
-        state: 'Idaho'
-      }
-    });
+      image: 'http://lorempixel.com/600/600/people/1'
+    });*/
   }
 
 
