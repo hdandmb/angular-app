@@ -1,1 +1,0 @@
-This Application was created to practice Angular 5 and get up to date with its new features and use old ones too. It interacts with lorempixel to pull in images of users and displays hard coded data.
