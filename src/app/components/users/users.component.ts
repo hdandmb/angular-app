@@ -15,11 +15,12 @@ import {
 
 export class UsersComponent implements OnInit {
   users: User[];
-
-  showExtended = true;
+  showExtended = false;
   loaded = false;
   buttonAddNewUser = true;
   currentClasses: {};
+  currentStyles: {};
+
 
 
   constructor() {}
@@ -72,7 +73,9 @@ export class UsersComponent implements OnInit {
       lastName: 'Nates',
       image: 'http://lorempixel.com/600/600/people/1'
     });*/
+
     this.setCurrentClasses();
+    this.setCurrentStyles();
   }
 
   addUser(user: User) {
@@ -82,7 +85,15 @@ export class UsersComponent implements OnInit {
   setCurrentClasses( ) {
     this.currentClasses = {
       'btn-success': this.buttonAddNewUser
-    };
+    }
+  }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      'text-align' : this.showExtended ? '0' : 'center',
+      'padding-top' : this.showExtended ? '0' : '85px',
+      'font-size' : this.showExtended ? '' : '40px'
+    }
   }
 
 }
