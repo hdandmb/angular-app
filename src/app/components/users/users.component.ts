@@ -15,7 +15,7 @@ import {
 
 export class UsersComponent implements OnInit {
   users: User[];
-  showExtended true;
+  showExtended = true;
   loaded = false;
   buttonAddNewUser = true;
   currentClasses: {};
@@ -91,7 +91,7 @@ export class UsersComponent implements OnInit {
   setCurrentClasses( ) {
     this.currentClasses = {
       'btn-success': this.buttonAddNewUser
-    }
+    };
   }
 
   setCurrentStyles() {
@@ -99,7 +99,7 @@ export class UsersComponent implements OnInit {
       'text-align' : this.showExtended ? '0' : 'center',
       'padding-top' : this.showExtended ? '0' : '85px',
       'font-size' : this.showExtended ? '' : '40px'
-    }
+    };
   }
 
 }
